@@ -5,7 +5,6 @@ import { addToCart } from "../features/cartSlice";
 
 const Home = () => {
     //const {data,error,isLoading}=useGetAllProductsQuery();
-    const auth = useSelector((state)=>state.auth);
     const { items: data, status } = useSelector((state) => state.products);
     
     const dispatch = useDispatch();

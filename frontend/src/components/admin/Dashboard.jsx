@@ -3,19 +3,6 @@ import { Outlet, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Dashboard = () => {
-   /* return (
-        <StyledDashboard>
-            <SideNav>
-                <h3>Quick Links</h3>
-                <NavLink to="/admin/summary">Summary</NavLink>
-                <NavLink to="/admin/products">Products</NavLink>
-            </SideNav>
-            <Content>
-                <Outlet/>
-            </Content>
-        </StyledDashboard>
-    )
-  */
   const auth = useSelector((state) => state.auth);
 
   if (!auth.isAdmin) return <p>Access denied. Not an Admin!</p>;
